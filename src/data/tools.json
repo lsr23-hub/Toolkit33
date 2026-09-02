@@ -1,0 +1,722 @@
+[
+  {
+    "id": 1,
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "category": "AI 编程",
+    "keywords": [
+      "AI代理",
+      "工程",
+      "技能"
+    ],
+    "description": "Matt Pocock 公开的实战型 agents 技能集合，提供可直接复用的编码规范、工程流程和领域工作方法，适合扩展 Claude Code、Codex 等编码代理。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 1,
+    "is_featured": true
+  },
+  {
+    "id": 2,
+    "name": "ai-coding-academy",
+    "url": "https://github.com/yan314071-dev/ai-coding-academy",
+    "category": "AI 编程",
+    "keywords": [
+      "AI编程",
+      "课程",
+      "入门"
+    ],
+    "description": "中文交互式 AI 编程课程，按 8 章 29 课讲解提示词、代码生成、调试和协作等基础概念，适合系统入门 AI 辅助开发。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 2,
+    "is_featured": false
+  },
+  {
+    "id": 3,
+    "name": "openship",
+    "url": "https://github.com/oblien/openship",
+    "category": "部署运维",
+    "keywords": [
+      "部署",
+      "运维",
+      "自托管"
+    ],
+    "description": "面向自有服务器的开源部署平台，用于管理应用发布、运行环境和基础设施，适合希望减少第三方 PaaS 依赖的团队。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 3,
+    "is_featured": false
+  },
+  {
+    "id": 4,
+    "name": "coolify",
+    "url": "https://github.com/coollabsio/coolify",
+    "category": "部署运维",
+    "keywords": [
+      "部署",
+      "运维",
+      "PaaS"
+    ],
+    "description": "可自托管的开源 PaaS，支持静态站点、数据库、全栈应用和大量一键服务，定位类似 Vercel、Heroku、Netlify 的自建替代方案。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 4,
+    "is_featured": true
+  },
+  {
+    "id": 5,
+    "name": "dokploy",
+    "url": "https://github.com/Dokploy/dokploy",
+    "category": "部署运维",
+    "keywords": [
+      "部署",
+      "运维",
+      "VPS"
+    ],
+    "description": "开源应用部署平台，提供接近 Vercel、Netlify、Heroku 的项目发布体验，适合在自己的 VPS 或服务器上部署 Web 服务。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 5,
+    "is_featured": false
+  },
+  {
+    "id": 6,
+    "name": "holopixai",
+    "url": "https://holopix.cn/home",
+    "category": "素材资源",
+    "keywords": [
+      "AI视觉",
+      "游戏美术",
+      "生成"
+    ],
+    "description": "面向游戏美术设计的 AI 工具，强调低门槛和可控生成，可用于角色、场景、道具等视觉资产的概念设计与迭代。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/holopix.cn.ico",
+    "sort_order": 6,
+    "is_featured": false
+  },
+  {
+    "id": 7,
+    "name": "gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "动画",
+      "GSAP"
+    ],
+    "description": "GSAP 官方 AI 技能集合，帮助编码代理正确使用 GreenSock 动画平台、常见动画模式和插件，减少 API 误用与低质量实现。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 7,
+    "is_featured": true
+  },
+  {
+    "id": 8,
+    "name": "ponytail",
+    "url": "https://github.com/DietrichGebert/ponytail",
+    "category": "AI 编程",
+    "keywords": [
+      "AI代理",
+      "工程",
+      "简化"
+    ],
+    "description": "用于约束 AI 代理行为的轻量技能，鼓励优先采用简单方案、减少不必要代码和过度设计，适合纳入日常编码代理工作流。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 8,
+    "is_featured": false
+  },
+  {
+    "id": 9,
+    "name": "playwright-mcp",
+    "url": "https://github.com/microsoft/playwright-mcp",
+    "category": "前端设计",
+    "keywords": [
+      "浏览器自动化",
+      "测试",
+      "MCP"
+    ],
+    "description": "微软提供的 Playwright MCP 服务，让 AI 代理通过结构化浏览器操作访问网页、填写表单、执行交互和验证页面行为。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 9,
+    "is_featured": false
+  },
+  {
+    "id": 10,
+    "name": "taste-skill",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "视觉效果",
+      "设计判断"
+    ],
+    "description": "为 AI 编码代理补充设计判断力的技能，针对模板化、单调和缺乏层次的界面输出提供视觉与交互约束。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 10,
+    "is_featured": false
+  },
+  {
+    "id": 11,
+    "name": "impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "设计系统",
+      "UI"
+    ],
+    "description": "面向 AI 开发工具的设计语言与规则集合，用于改善组件组合、排版、配色和整体界面质量，帮助代理产出更一致的产品 UI。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 11,
+    "is_featured": false
+  },
+  {
+    "id": 12,
+    "name": "strix",
+    "url": "https://github.com/usestrix/strix",
+    "category": "安全测试",
+    "keywords": [
+      "安全",
+      "测试",
+      "渗透"
+    ],
+    "description": "开源 AI 渗透测试工具，可对应用执行安全探测、复现潜在漏洞并辅助修复，适合纳入开发阶段的安全检查流程。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 12,
+    "is_featured": false
+  },
+  {
+    "id": 13,
+    "name": "awesome-llm-apps",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "category": "AI 编程",
+    "keywords": [
+      "AI应用",
+      "案例",
+      "RAG"
+    ],
+    "description": "收集 100 多个开源 AI Agent、Agent Skill 和 RAG 应用，适合查找可运行示例、技术组合和项目灵感。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 13,
+    "is_featured": true
+  },
+  {
+    "id": 14,
+    "name": "vibehub",
+    "url": "https://vibe-hub.org/",
+    "category": "AI 编程",
+    "keywords": [
+      "AI编程",
+      "学习",
+      "术语"
+    ],
+    "description": "用大白话解释前端、后端和 AI 开发术语的知识图鉴，帮助快速理解 Vibe Coding 生态中的概念和工具名称。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/vibe-hub.org.ico",
+    "sort_order": 14,
+    "is_featured": false
+  },
+  {
+    "id": 15,
+    "name": "hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes",
+    "category": "视频创作",
+    "keywords": [
+      "视频",
+      "HTML",
+      "生成"
+    ],
+    "description": "面向编码代理的 HTML 到视频工具，通过编写 HTML/CSS/JavaScript 场景并渲染为视频，适合自动生成动态演示和视觉内容。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 15,
+    "is_featured": false
+  },
+  {
+    "id": 16,
+    "name": "seedance2.0",
+    "url": "https://github.com/Emily2040/seedance-2.0",
+    "category": "视频创作",
+    "keywords": [
+      "视频",
+      "生成",
+      "分镜"
+    ],
+    "description": "围绕 Seedance 2.0 的多模态 AI 影视制作流程，覆盖创意、分镜、素材组织和生成式视频制作等环节。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 16,
+    "is_featured": false
+  },
+  {
+    "id": 17,
+    "name": "remotion",
+    "url": "https://github.com/remotion-dev/remotion",
+    "category": "视频创作",
+    "keywords": [
+      "视频",
+      "React",
+      "渲染"
+    ],
+    "description": "使用 React 以代码方式创建视频，支持组件化场景、参数化内容和服务端渲染，适合批量生成产品演示、社交媒体视频和数据动画。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 17,
+    "is_featured": true
+  },
+  {
+    "id": 18,
+    "name": "video-use",
+    "url": "https://github.com/browser-use/video-use",
+    "category": "视频创作",
+    "keywords": [
+      "剪辑",
+      "视频",
+      "自动化"
+    ],
+    "description": "让编码代理参与视频剪辑和处理，通过自然语言或代码完成素材整理、剪辑修改及视频工作流自动化。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 18,
+    "is_featured": false
+  },
+  {
+    "id": 19,
+    "name": "interview-coach-skill",
+    "url": "https://github.com/noamseg/interview-coach-skill",
+    "category": "科研成长",
+    "keywords": [
+      "求职",
+      "面试",
+      "简历"
+    ],
+    "description": "覆盖求职全流程的自适应面试教练，支持职位分析、简历优化、模拟面试、回答评分、故事库管理、复盘和薪资谈判。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 19,
+    "is_featured": false
+  },
+  {
+    "id": 20,
+    "name": "Auto-claude-code-research-in-sleep",
+    "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+    "category": "科研成长",
+    "keywords": [
+      "科研",
+      "自动化",
+      "机器学习"
+    ],
+    "description": "仅用 Markdown 技能实现的自主机器学习研究工作流，支持跨模型评审、研究想法发现和实验自动化，可用于 Claude Code、Codex 等代理。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 20,
+    "is_featured": true
+  },
+  {
+    "id": 21,
+    "name": "next-ai-draw.io",
+    "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+    "category": "效率工具",
+    "keywords": [
+      "绘图",
+      "图表",
+      "自然语言"
+    ],
+    "description": "基于 Next.js 的 draw.io 增强应用，可用自然语言创建、修改和完善流程图、架构图及其他结构化图示。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 21,
+    "is_featured": false
+  },
+  {
+    "id": 22,
+    "name": "anydoc",
+    "url": "https://github.com/firecrawl/anydoc",
+    "category": "数据与文档",
+    "keywords": [
+      "文档",
+      "转换",
+      "Markdown"
+    ],
+    "description": "将 Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV 和 PDF 转换为干净 Markdown 的工具，并提供 Rust、Node.js、Python 接口。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 22,
+    "is_featured": false
+  },
+  {
+    "id": 23,
+    "name": "GSAP",
+    "url": "https://gsap.com/docs/v3/Installation/",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "动画",
+      "JavaScript"
+    ],
+    "description": "GreenSock Animation Platform 的安装与使用文档，提供高性能 JavaScript 动画 API、时间线和插件的配置说明。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/gsap.com.ico",
+    "sort_order": 23,
+    "is_featured": true
+  },
+  {
+    "id": 24,
+    "name": "inspira ui",
+    "url": "https://inspira-ui.com/",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "Vue",
+      "动效"
+    ],
+    "description": "面向 Vue/Nuxt 的动效 UI 组件与视觉效果集合，可直接参考或复用发光、过渡、背景和交互组件来搭建现代网页界面。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/inspira-ui.com.ico",
+    "sort_order": 24,
+    "is_featured": false
+  },
+  {
+    "id": 25,
+    "name": "motion",
+    "url": "https://www.usemotion.com/",
+    "category": "效率工具",
+    "keywords": [
+      "效率",
+      "项目管理",
+      "AI"
+    ],
+    "description": "AI 驱动的工作管理 SuperApp，将任务、项目、日历和计划整合在一起，自动安排工作并帮助跟踪团队执行进度。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/usemotion.com.ico",
+    "sort_order": 25,
+    "is_featured": true
+  },
+  {
+    "id": 26,
+    "name": "lottie",
+    "url": "https://github.com/airbnb/lottie-web",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "动画",
+      "JSON"
+    ],
+    "description": "将 After Effects 动画以 JSON 形式在 Web、Android、iOS 和 React Native 等平台原生渲染，适合轻量交互动效和产品动画。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 26,
+    "is_featured": false
+  },
+  {
+    "id": 27,
+    "name": "anime.js",
+    "url": "https://animejs.com/",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "动画",
+      "SVG"
+    ],
+    "description": "轻量 JavaScript 动画引擎，支持 DOM、CSS、SVG 和 JavaScript 对象动画，可用于网页过渡、微交互和复杂时间线效果。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/animejs.com.ico",
+    "sort_order": 27,
+    "is_featured": false
+  },
+  {
+    "id": 28,
+    "name": "supervisor-skills",
+    "url": "https://github.com/HKUSTDial/Supervisor-Skills",
+    "category": "科研成长",
+    "keywords": [
+      "科研",
+      "写作",
+      "导师经验"
+    ],
+    "description": "把导师科研经验整理为可调用的 AI 技能，覆盖研究想法、实验设计、论文写作、修改和投稿等阶段，可作为科研代理的流程模板。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 28,
+    "is_featured": false
+  },
+  {
+    "id": 29,
+    "name": "firecrawl",
+    "url": "https://github.com/firecrawl/firecrawl",
+    "category": "数据与文档",
+    "keywords": [
+      "网页",
+      "数据",
+      "抓取"
+    ],
+    "description": "面向大规模网页搜索、抓取和交互的 Context API，把网页内容清洗成适合 LLM 使用的结构化上下文，适合构建检索和研究应用。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 29,
+    "is_featured": true
+  },
+  {
+    "id": 30,
+    "name": "video-shotcraft",
+    "url": "https://github.com/Vincentwei1021/video-shotcraft",
+    "category": "视频创作",
+    "keywords": [
+      "视频",
+      "剪辑",
+      "镜头模板"
+    ],
+    "description": "面向 Claude Code 和 Codex 的 AI 视频技能，基于 Remotion 提供 152 张镜头配方卡、209 个动效预览和可直接使用的产品视频模板。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 30,
+    "is_featured": false
+  },
+  {
+    "id": 31,
+    "name": "shadcn-ui",
+    "url": "https://github.com/shadcn-ui/ui",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "组件",
+      "无障碍"
+    ],
+    "description": "一组设计统一且注重无障碍的 UI 组件，同时提供源码分发方式，开发者可以将组件直接复制到自己的项目并按需修改。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 31,
+    "is_featured": true
+  },
+  {
+    "id": 32,
+    "name": "ui-ux-pro-max-skill",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "视觉效果",
+      "UI/UX"
+    ],
+    "description": "为 AI 代理提供专业 UI/UX 设计知识和决策规则，覆盖网页、移动端、配色、排版、组件和交互等多个平台与设计环节。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 32,
+    "is_featured": false
+  },
+  {
+    "id": 33,
+    "name": "awesome-design-md",
+    "url": "https://github.com/voltagent/awesome-design-md",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "设计模式",
+      "设计令牌"
+    ],
+    "description": "收集开发者网站的 DESIGN.md 分析，整理真实网站的设计模式、设计令牌和规则，可直接作为 AI 代理生成高一致性 UI 的参考资料。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 33,
+    "is_featured": false
+  },
+  {
+    "id": 34,
+    "name": "UP",
+    "url": "https://github.com/byoungd/up",
+    "category": "科研成长",
+    "keywords": [
+      "学习",
+      "成长",
+      "人生规划"
+    ],
+    "description": "一份个人进阶指南，涵盖人生规划、英语学习和能力提升等内容，适合用作长期自我管理与成长参考。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 34,
+    "is_featured": true
+  },
+  {
+    "id": 35,
+    "name": "Awesome-gpt-image-2",
+    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "category": "AI 编程",
+    "keywords": [
+      "AI绘图",
+      "提示词",
+      "Prompt as Code"
+    ],
+    "description": "GPT-Image-2 的 Prompt as Code 提示词引擎与模板库，收集 530 多个案例和 20 多套工业级模板，并提炼为可复用的图像生成技能。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 35,
+    "is_featured": false
+  },
+  {
+    "id": 36,
+    "name": "Pixels",
+    "url": "https://www.pexels.com/zh-cn/",
+    "category": "素材资源",
+    "keywords": [
+      "图片",
+      "视频",
+      "摄影"
+    ],
+    "description": "提供可免费使用的高质量图片和视频素材库，支持按主题搜索、下载和用于设计、内容创作及演示项目。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/pexels.com.ico",
+    "sort_order": 36,
+    "is_featured": true
+  },
+  {
+    "id": 37,
+    "name": "Pixabay",
+    "url": "https://pixabay.com/",
+    "category": "素材资源",
+    "keywords": [
+      "图片",
+      "素材",
+      "音乐"
+    ],
+    "description": "免费的图片、插画、矢量图、视频和音乐素材平台，适合快速查找可用于网页、海报、视频和社交媒体的视觉资源。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/pixabay.com.ico",
+    "sort_order": 37,
+    "is_featured": false
+  },
+  {
+    "id": 38,
+    "name": "Unsplash",
+    "url": "https://unsplash.com/",
+    "category": "素材资源",
+    "keywords": [
+      "图片",
+      "摄影",
+      "封面"
+    ],
+    "description": "以高分辨率摄影作品为主的图片平台，适合寻找网站封面、演示背景、品牌视觉和内容创作所需的照片素材。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/unsplash.com.ico",
+    "sort_order": 38,
+    "is_featured": true
+  },
+  {
+    "id": 39,
+    "name": "brusheezy",
+    "url": "https://www.brusheezy.com/",
+    "category": "素材资源",
+    "keywords": [
+      "笔刷",
+      "设计素材",
+      "Photoshop"
+    ],
+    "description": "面向 Photoshop 和数字绘画的免费笔刷资源库，可查找水彩、纹理、烟雾、光效等笔刷，用于插画和视觉设计。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/brusheezy.com.ico",
+    "sort_order": 39,
+    "is_featured": false
+  },
+  {
+    "id": 40,
+    "name": "fbrush",
+    "url": "https://fbrushes.com/",
+    "category": "素材资源",
+    "keywords": [
+      "笔刷",
+      "纹理",
+      "Photoshop"
+    ],
+    "description": "提供免费的 Photoshop 笔刷、图案和纹理资源，适合为海报、插画、界面和图片后期添加材质与细节效果。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/fbrushes.com.ico",
+    "sort_order": 40,
+    "is_featured": false
+  },
+  {
+    "id": 41,
+    "name": "pixdden",
+    "url": "https://www.pixeden.com/",
+    "category": "素材资源",
+    "keywords": [
+      "设计素材",
+      "模板",
+      "PSD"
+    ],
+    "description": "提供网页、平面设计和品牌项目常用的 PSD 素材、模板、图标、字体及展示资源，适合快速搭建设计稿和视觉方案。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/pixeden.com.ico",
+    "sort_order": 41,
+    "is_featured": false
+  },
+  {
+    "id": 42,
+    "name": "mockups design",
+    "url": "https://mockups-design.com/",
+    "category": "素材资源",
+    "keywords": [
+      "样机",
+      "设计展示",
+      "模板"
+    ],
+    "description": "提供免费和高级产品样机模板，可将海报、包装、界面和品牌设计快速放入真实场景中进行展示与提案。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/mockups-design.com.ico",
+    "sort_order": 42,
+    "is_featured": false
+  },
+  {
+    "id": 43,
+    "name": "smoothui",
+    "url": "https://smoothui.dev/",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "React",
+      "Motion"
+    ],
+    "description": "提供带有流畅 Motion 动画的 React 组件，兼容 shadcn/ui，可通过 Tailwind CSS 自定义，适合快速构建动效丰富的现代网页界面。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/smoothui.dev.ico",
+    "sort_order": 43,
+    "is_featured": false
+  },
+  {
+    "id": 44,
+    "name": "Aceternity UI",
+    "url": "https://ui.aceternity.com/",
+    "category": "前端设计",
+    "keywords": [
+      "前端",
+      "组件",
+      "Tailwind CSS"
+    ],
+    "description": "React 与 Tailwind CSS 组件库，提供 200 多个可复制的组件、页面区块和落地页模板，并结合 Motion 实现高质量交互动效。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/ui.aceternity.com.ico",
+    "sort_order": 44,
+    "is_featured": true
+  },
+  {
+    "id": 45,
+    "name": "public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "category": "数据与文档",
+    "keywords": [
+      "API",
+      "开放数据",
+      "开发资源"
+    ],
+    "description": "由社区维护的免费 API 汇总清单，按主题整理可直接调用的公共接口，适合快速寻找原型开发、数据实验和自动化项目所需的数据源。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 45,
+    "is_featured": true
+  },
+  {
+    "id": 46,
+    "name": "meetily",
+    "url": "https://github.com/Zackriya-Solutions/meetily",
+    "category": "效率工具",
+    "keywords": [
+      "会议记录",
+      "语音转写",
+      "本地AI"
+    ],
+    "description": "隐私优先的开源 AI 会议助手，支持本地实时转写、说话人识别和 Ollama 摘要，在 macOS 与 Windows 上处理会议内容且无需云端服务。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 46,
+    "is_featured": false
+  },
+  {
+    "id": 47,
+    "name": "ai-website-cloner-template",
+    "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+    "category": "前端设计",
+    "keywords": [
+      "AI编程",
+      "网站复刻",
+      "模板"
+    ],
+    "description": "使用 AI 编码代理一条命令复刻网站的项目模板，适合快速搭建网页原型、研究界面结构和验证前端实现思路。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 47,
+    "is_featured": false
+  },
+  {
+    "id": 48,
+    "name": "skill-zine-summary",
+    "url": "https://github.com/tluy/skill-zine-summary",
+    "category": "AI 编程",
+    "keywords": [
+      "AI技能",
+      "艺术杂志",
+      "内容总结"
+    ],
+    "description": "艺术杂志主题的技能合集，用于整理和总结视觉文化内容，可作为 AI 代理处理阅读、提炼与内容创作任务的参考。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 48,
+    "is_featured": false
+  }
+]
