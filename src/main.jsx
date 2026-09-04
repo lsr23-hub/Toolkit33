@@ -11,6 +11,7 @@ import {
   X,
 } from 'lucide-react';
 import tools from './data/tools.json';
+import { getIconSources, isReadableIconProxy, shouldUseDarkIconBackground } from './icon-tone.js';
 import './styles.css';
 
 const categoryOrder = ['AI 编程', '前端设计', '部署运维', '视频创作', '素材资源', '科研成长', '效率工具', '数据与文档', '安全测试'];
@@ -25,6 +26,29 @@ const categoryNotes = {
   '数据与文档': '让信息变得更干净',
   '安全测试': '在发布前多看一眼',
 };
+const iconToneCache = new Map();
+
+function needsDarkIconBackground(image) {
+  const source = image.currentSrc || image.src;
+  if (iconToneCache.has(source)) return iconToneCache.get(source);
+
+  try {
+    const sampleSize = 32;
+    const canvas = document.createElement('canvas');
+    canvas.width = sampleSize;
+    canvas.height = sampleSize;
+    const context = canvas.getContext('2d', { willReadFrequently: true });
+    if (!context) return false;
+    context.drawImage(image, 0, 0, sampleSize, sampleSize);
+    const pixels = context.getImageData(0, 0, sampleSize, sampleSize).data;
+    const isLightIcon = shouldUseDarkIconBackground(pixels, sampleSize);
+    iconToneCache.set(source, isLightIcon);
+    return isLightIcon;
+  } catch {
+    iconToneCache.set(source, false);
+    return false;
+  }
+}
 
 function App() {
   const [activeCategory, setActiveCategory] = useState('全部');
@@ -189,7 +213,7 @@ function App() {
     card.style.pointerEvents = 'none';
     const cardAnimation = card.animate([
       { transform: 'none', opacity: 1, borderRadius: '16px', boxShadow: '0 28px 80px rgba(0, 0, 0, .3)' },
-      { transform: `translate(${translateX}px, ${translateY}px) scale(${to.width / from.width}, ${to.height / from.height})`, opacity: .85, borderRadius: '0px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0)' },
+      { transform: `translate(${translateX}px, ${translateY}px) scale(${to.width / from.width}, ${to.height / from.height})`, opacity: 0, borderRadius: '0px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0)' },
     ], { duration: 260, easing: 'cubic-bezier(.7, 0, .84, 0)', fill: 'forwards' });
     const layerAnimation = layer.animate([
       { backgroundColor: 'rgba(11, 13, 12, .62)', backdropFilter: 'blur(8px)' },
@@ -304,15 +328,28 @@ function ToolCard({ tool, isSaved, onSave, onOpen }) {
 
 function ToolIcon({ tool, large = false }) {
   const [sourceIndex, setSourceIndex] = useState(0);
+  const [iconTone, setIconTone] = useState('pending');
   const mark = tool.name.replace(/[^a-zA-Z0-9]/g, '').slice(0, 2).toUpperCase() || '叁';
   const originIcon = (() => {
     try { return new URL('/favicon.ico', tool.url).href; } catch { return ''; }
   })();
-  const sources = [...new Set([tool.icon_url, originIcon].filter(Boolean))];
+  const sources = getIconSources(tool.icon_url, originIcon, window.location.origin);
   const source = sources[sourceIndex];
+  useEffect(() => {
+    if (!source) {
+      setIconTone('default');
+      return;
+    }
+    const cachedTone = iconToneCache.get(source);
+    setIconTone(cachedTone === undefined ? 'pending' : cachedTone ? 'light' : 'default');
+  }, [source]);
 
-  return <div className={`tool-logo ${large ? 'is-large' : ''}`} aria-hidden="true">
-    {source ? <img src={source} alt="" loading={large ? 'eager' : 'lazy'} referrerPolicy="no-referrer" onError={() => setSourceIndex((index) => index + 1)} /> : <span>{mark}</span>}
+  const handleLoad = (event) => {
+    setIconTone(needsDarkIconBackground(event.currentTarget) ? 'light' : 'default');
+  };
+
+  return <div className={`tool-logo ${large ? 'is-large' : ''} ${iconTone === 'light' ? 'has-light-icon' : ''} ${iconTone === 'pending' ? 'is-analyzing' : ''}`} aria-hidden="true">
+    {source ? <img src={source} alt="" loading={large ? 'eager' : 'lazy'} crossOrigin={isReadableIconProxy(source) ? 'anonymous' : undefined} referrerPolicy="no-referrer" onLoad={handleLoad} onError={() => setSourceIndex((index) => index + 1)} /> : <span>{mark}</span>}
   </div>;
 }
 
@@ -328,7 +365,7 @@ function ToolModal({ tool, originRect, openAnimationRef, isSaved, onSave, onClos
     const translateX = originRect.left + originRect.width / 2 - (destination.left + destination.width / 2);
     const translateY = originRect.top + originRect.height / 2 - (destination.top + destination.height / 2);
     const animation = card.animate([
-      { transform: `translate(${translateX}px, ${translateY}px) scale(${originRect.width / destination.width}, ${originRect.height / destination.height})`, opacity: .85, borderRadius: '0px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0)' },
+      { transform: `translate(${translateX}px, ${translateY}px) scale(${originRect.width / destination.width}, ${originRect.height / destination.height})`, opacity: 0, borderRadius: '0px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0)' },
       { transform: 'none', opacity: 1, borderRadius: '16px', boxShadow: '0 28px 80px rgba(0, 0, 0, .3)' },
     ], { duration: 380, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'both' });
     openAnimationRef.current = animation;

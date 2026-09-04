@@ -1,0 +1,5 @@
+interface:
+  display_name: "Tool Card Data Enricher"
+  short_description: "Research and complete new tool card data"
+  brand_color: "#D94832"
+  default_prompt: "Use $tool-card-data-enricher to research this project and prepare a complete tool card from its name and URL."

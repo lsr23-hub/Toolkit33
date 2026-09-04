@@ -76,3 +76,25 @@ VALUES
   ('meetily', 'https://github.com/Zackriya-Solutions/meetily', '效率工具', '["会议记录","语音转写","本地AI"]', '隐私优先的开源 AI 会议助手，支持本地实时转写、说话人识别和 Ollama 摘要，在 macOS 与 Windows 上处理会议内容且无需云端服务。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 46, 0),
   ('ai-website-cloner-template', 'https://github.com/JCodesMore/ai-website-cloner-template', '前端设计', '["AI编程","网站复刻","模板"]', '使用 AI 编码代理一条命令复刻网站的项目模板，适合快速搭建网页原型、研究界面结构和验证前端实现思路。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 47, 0),
   ('skill-zine-summary', 'https://github.com/tluy/skill-zine-summary', 'AI 编程', '["AI技能","艺术杂志","内容总结"]', '艺术杂志主题的技能合集，用于整理和总结视觉文化内容，可作为 AI 代理处理阅读、提炼与内容创作任务的参考。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 48, 0);
+
+INSERT OR IGNORE INTO tools
+  (name, url, category, keywords, description, icon_url, sort_order, is_featured)
+VALUES
+  ('huashu-design', 'https://github.com/alchaincyf/huashu-design', 'AI 编程', '["智能技能","设计自动化","网页原生"]', '面向 Claude Code、Codex 等代理的 HTML 原生设计 skill，可生成交互原型、演示幻灯片、动画和信息图，并支持导出视频，适合快速制作可交付设计稿。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 49, 0),
+  ('OpenDesign', 'https://github.com/nexu-io/open-design', '前端设计', '["设计代理","原型制作","多格式导出"]', '开源的 Claude Design 替代方案和本地优先桌面应用，可用编码代理制作原型、落地页、仪表盘、幻灯片、图片与视频，并导出 HTML、PDF、PPTX 和 MP4。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 50, 0),
+  ('甲壳虫开源项目', 'https://blog.openbeetles.com/', 'AI 编程', '["氛围编程","前端设计","开发教程"]', '围绕 Vibe Coding 的中文博客与实践站点，持续讲解前端设计、AI 编程术语和界面实现方法，适合学习与改进 AI 生成的网页。', 'https://icons.duckduckgo.com/ip3/blog.openbeetles.com.ico', 51, 0),
+  ('BossHunter', 'https://github.com/shengjidaguai-china/BossHunter', '科研成长', '["求职","岗位筛选","智能代理"]', '本地运行的智能求职 Agent，支持岗位采集、AI 评分、人工确认投递、回复跟进和定制简历生成，适合减少重复求职操作并保留人工决策。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 52, 0),
+  ('Headroom', 'https://github.com/headroomlabs-ai/headroom', 'AI 编程', '["上下文压缩","智能代理","令牌优化"]', '在内容发送给大语言模型前压缩工具输出、日志、文件、RAG 片段和对话上下文，提供库、代理与 MCP 服务，适合降低代理任务的上下文开销。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 53, 0),
+  ('Futurepedia', 'https://www.futurepedia.io/', '效率工具', '["智能工具","工具导航","效率"]', 'AI 工具与软件发现目录，按用途帮助用户查找用于提升工作和生活效率的工具，适合进行 AI 工具选型和快速探索。', 'https://icons.duckduckgo.com/ip3/www.futurepedia.io.ico', 54, 0),
+  ('Uiverse', 'https://uiverse.io/', '前端设计', '["界面元素","社区设计","前端组件"]', '由社区设计者分享 UI 元素的平台，支持搜索、交互预览和复用开源组件，适合为网页界面查找按钮、加载器等设计实现。', 'https://icons.duckduckgo.com/ip3/uiverse.io.ico', 55, 0),
+  ('Yila AI', 'https://yila.ai/zh/playbooks', '科研成长', '["科研智能体","文献检索","论文写作"]', '面向科研工作的智能体集合，覆盖选题验证、文献检索与精读、综述、数据分析、科研绘图、论文写作、海报和幻灯片制作。', 'https://icons.duckduckgo.com/ip3/yila.ai.ico', 56, 0),
+  ('gzh-design-skill', 'https://github.com/isjiamu/gzh-design-skill', 'AI 编程', '["公众号排版","文档转网页","微信写作"]', '将 Markdown 一键转换为可粘贴到微信公众号编辑器的内联 HTML，提供多套主题、图片与代码块处理、章节标记和双关卡质量校验。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 57, 0),
+  ('baoyu-skills', 'https://github.com/JimLiu/baoyu-skills', 'AI 编程', '["智能技能","编码代理","内容创作"]', '面向 Claude Code、Codex 等 AI Agent 的技能集合，包含公众号文章配图、排版和发布等可按需安装的工作流模块。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 58, 0),
+  ('TrendRadar', 'https://github.com/sansan0/TrendRadar', '数据与文档', '["舆情监控","热点聚合","资讯订阅"]', '聚合多平台热点和 RSS 订阅的舆情监控工具，支持关键词筛选、AI 翻译与分析、MCP 查询以及通过多种渠道推送简报。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 59, 0),
+  ('WeWrite', 'https://github.com/imraywang/wewrite', 'AI 编程', '["公众号写作","内容工作流","微信发布"]', '面向 AI Agent 的公众号内容工作流 skill，覆盖选题、素材搜集、写作、编辑审稿，并可按需配图、排版、推送草稿箱和改写到其他平台。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 60, 0),
+  ('句方便', 'https://seneasy.cloud/', '效率工具', '["公众号排版","智能配图","文档编辑"]', '公众号内容整理工具，提供智能排版、智能配图和 Markdown 编辑能力，支持多种主题，适合完成文章发布前的编辑准备。', 'https://icons.duckduckgo.com/ip3/seneasy.cloud.ico', 61, 0),
+  ('今日热榜', 'https://tophub.today/', '数据与文档', '["热榜聚合","热点资讯","多平台"]', '聚合微信、知乎、微博、GitHub、抖音等多个平台热榜的资讯网站，适合集中追踪全网热点并进行快速阅读。', 'https://icons.duckduckgo.com/ip3/tophub.today.ico', 62, 0),
+  ('Canva可画', 'https://www.canva.cn/', '素材资源', '["在线设计","视觉创作","图形编辑"]', 'Canva 的中文在线设计平台入口，提供视觉内容设计与编辑服务，适合日常图形创作。', 'https://icons.duckduckgo.com/ip3/www.canva.cn.ico', 63, 0),
+  ('零克查词', 'https://www.lingkechaci.com/', '数据与文档', '["敏感词检测","内容审核","平台合规"]', '面向内容创作者的敏感词和违规词检测工具，支持小红书、抖音、快手和 B 站等平台内容检查，适合发布前进行文字审核。', 'https://icons.duckduckgo.com/ip3/www.lingkechaci.com.ico', 64, 0),
+  ('bloub', 'https://bloub.vercel.app/', '前端设计', '["矢量动画","头像动效","形态变形"]', '基于 SVG 的动画头像实验，将参考头像逐帧重建并在 14 种形态之间变形，适合观察无动画库的 SVG 动效实现。', 'https://icons.duckduckgo.com/ip3/bloub.vercel.app.ico', 65, 0),
+  ('Ant Design', 'https://ant.design/index-cn', '前端设计', '["前端组件","设计系统","企业界面"]', '基于 Ant Design 设计体系的 React UI 组件库，提供面向企业级中后台产品的组件与设计规范，适合构建一致的 Web 应用界面。', 'https://icons.duckduckgo.com/ip3/ant.design.ico', 66, 0);

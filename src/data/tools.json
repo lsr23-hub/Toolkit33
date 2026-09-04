@@ -718,5 +718,275 @@
     "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
     "sort_order": 48,
     "is_featured": false
+  },
+  {
+    "id": 49,
+    "name": "huashu-design",
+    "url": "https://github.com/alchaincyf/huashu-design",
+    "category": "AI 编程",
+    "keywords": [
+      "智能技能",
+      "设计自动化",
+      "网页原生"
+    ],
+    "description": "面向 Claude Code、Codex 等代理的 HTML 原生设计 skill，可生成交互原型、演示幻灯片、动画和信息图，并支持导出视频，适合快速制作可交付设计稿。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 49,
+    "is_featured": false
+  },
+  {
+    "id": 50,
+    "name": "OpenDesign",
+    "url": "https://github.com/nexu-io/open-design",
+    "category": "前端设计",
+    "keywords": [
+      "设计代理",
+      "原型制作",
+      "多格式导出"
+    ],
+    "description": "开源的 Claude Design 替代方案和本地优先桌面应用，可用编码代理制作原型、落地页、仪表盘、幻灯片、图片与视频，并导出 HTML、PDF、PPTX 和 MP4。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 50,
+    "is_featured": false
+  },
+  {
+    "id": 51,
+    "name": "甲壳虫开源项目",
+    "url": "https://blog.openbeetles.com/",
+    "category": "AI 编程",
+    "keywords": [
+      "氛围编程",
+      "前端设计",
+      "开发教程"
+    ],
+    "description": "围绕 Vibe Coding 的中文博客与实践站点，持续讲解前端设计、AI 编程术语和界面实现方法，适合学习与改进 AI 生成的网页。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/blog.openbeetles.com.ico",
+    "sort_order": 51,
+    "is_featured": false
+  },
+  {
+    "id": 52,
+    "name": "BossHunter",
+    "url": "https://github.com/shengjidaguai-china/BossHunter",
+    "category": "科研成长",
+    "keywords": [
+      "求职",
+      "岗位筛选",
+      "智能代理"
+    ],
+    "description": "本地运行的智能求职 Agent，支持岗位采集、AI 评分、人工确认投递、回复跟进和定制简历生成，适合减少重复求职操作并保留人工决策。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 52,
+    "is_featured": false
+  },
+  {
+    "id": 53,
+    "name": "Headroom",
+    "url": "https://github.com/headroomlabs-ai/headroom",
+    "category": "AI 编程",
+    "keywords": [
+      "上下文压缩",
+      "智能代理",
+      "令牌优化"
+    ],
+    "description": "在内容发送给大语言模型前压缩工具输出、日志、文件、RAG 片段和对话上下文，提供库、代理与 MCP 服务，适合降低代理任务的上下文开销。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 53,
+    "is_featured": false
+  },
+  {
+    "id": 54,
+    "name": "Futurepedia",
+    "url": "https://www.futurepedia.io/",
+    "category": "效率工具",
+    "keywords": [
+      "智能工具",
+      "工具导航",
+      "效率"
+    ],
+    "description": "AI 工具与软件发现目录，按用途帮助用户查找用于提升工作和生活效率的工具，适合进行 AI 工具选型和快速探索。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/www.futurepedia.io.ico",
+    "sort_order": 54,
+    "is_featured": false
+  },
+  {
+    "id": 55,
+    "name": "Uiverse",
+    "url": "https://uiverse.io/",
+    "category": "前端设计",
+    "keywords": [
+      "界面元素",
+      "社区设计",
+      "前端组件"
+    ],
+    "description": "由社区设计者分享 UI 元素的平台，支持搜索、交互预览和复用开源组件，适合为网页界面查找按钮、加载器等设计实现。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/uiverse.io.ico",
+    "sort_order": 55,
+    "is_featured": false
+  },
+  {
+    "id": 56,
+    "name": "Yila AI",
+    "url": "https://yila.ai/zh/playbooks",
+    "category": "科研成长",
+    "keywords": [
+      "科研智能体",
+      "文献检索",
+      "论文写作"
+    ],
+    "description": "面向科研工作的智能体集合，覆盖选题验证、文献检索与精读、综述、数据分析、科研绘图、论文写作、海报和幻灯片制作。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/yila.ai.ico",
+    "sort_order": 56,
+    "is_featured": false
+  },
+  {
+    "id": 57,
+    "name": "gzh-design-skill",
+    "url": "https://github.com/isjiamu/gzh-design-skill",
+    "category": "AI 编程",
+    "keywords": [
+      "公众号排版",
+      "文档转网页",
+      "微信写作"
+    ],
+    "description": "将 Markdown 一键转换为可粘贴到微信公众号编辑器的内联 HTML，提供多套主题、图片与代码块处理、章节标记和双关卡质量校验。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 57,
+    "is_featured": false
+  },
+  {
+    "id": 58,
+    "name": "baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills",
+    "category": "AI 编程",
+    "keywords": [
+      "智能技能",
+      "编码代理",
+      "内容创作"
+    ],
+    "description": "面向 Claude Code、Codex 等 AI Agent 的技能集合，包含公众号文章配图、排版和发布等可按需安装的工作流模块。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 58,
+    "is_featured": false
+  },
+  {
+    "id": 59,
+    "name": "TrendRadar",
+    "url": "https://github.com/sansan0/TrendRadar",
+    "category": "数据与文档",
+    "keywords": [
+      "舆情监控",
+      "热点聚合",
+      "资讯订阅"
+    ],
+    "description": "聚合多平台热点和 RSS 订阅的舆情监控工具，支持关键词筛选、AI 翻译与分析、MCP 查询以及通过多种渠道推送简报。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 59,
+    "is_featured": false
+  },
+  {
+    "id": 60,
+    "name": "WeWrite",
+    "url": "https://github.com/imraywang/wewrite",
+    "category": "AI 编程",
+    "keywords": [
+      "公众号写作",
+      "内容工作流",
+      "微信发布"
+    ],
+    "description": "面向 AI Agent 的公众号内容工作流 skill，覆盖选题、素材搜集、写作、编辑审稿，并可按需配图、排版、推送草稿箱和改写到其他平台。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 60,
+    "is_featured": false
+  },
+  {
+    "id": 61,
+    "name": "句方便",
+    "url": "https://seneasy.cloud/",
+    "category": "效率工具",
+    "keywords": [
+      "公众号排版",
+      "智能配图",
+      "文档编辑"
+    ],
+    "description": "公众号内容整理工具，提供智能排版、智能配图和 Markdown 编辑能力，支持多种主题，适合完成文章发布前的编辑准备。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/seneasy.cloud.ico",
+    "sort_order": 61,
+    "is_featured": false
+  },
+  {
+    "id": 62,
+    "name": "今日热榜",
+    "url": "https://tophub.today/",
+    "category": "数据与文档",
+    "keywords": [
+      "热榜聚合",
+      "热点资讯",
+      "多平台"
+    ],
+    "description": "聚合微信、知乎、微博、GitHub、抖音等多个平台热榜的资讯网站，适合集中追踪全网热点并进行快速阅读。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/tophub.today.ico",
+    "sort_order": 62,
+    "is_featured": false
+  },
+  {
+    "id": 63,
+    "name": "Canva可画",
+    "url": "https://www.canva.cn/",
+    "category": "素材资源",
+    "keywords": [
+      "在线设计",
+      "视觉创作",
+      "图形编辑"
+    ],
+    "description": "Canva 的中文在线设计平台入口，提供视觉内容设计与编辑服务，适合日常图形创作。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/www.canva.cn.ico",
+    "sort_order": 63,
+    "is_featured": false
+  },
+  {
+    "id": 64,
+    "name": "零克查词",
+    "url": "https://www.lingkechaci.com/",
+    "category": "数据与文档",
+    "keywords": [
+      "敏感词检测",
+      "内容审核",
+      "平台合规"
+    ],
+    "description": "面向内容创作者的敏感词和违规词检测工具，支持小红书、抖音、快手和 B 站等平台内容检查，适合发布前进行文字审核。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/www.lingkechaci.com.ico",
+    "sort_order": 64,
+    "is_featured": false
+  },
+  {
+    "id": 65,
+    "name": "bloub",
+    "url": "https://bloub.vercel.app/",
+    "category": "前端设计",
+    "keywords": [
+      "矢量动画",
+      "头像动效",
+      "形态变形"
+    ],
+    "description": "基于 SVG 的动画头像实验，将参考头像逐帧重建并在 14 种形态之间变形，适合观察无动画库的 SVG 动效实现。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/bloub.vercel.app.ico",
+    "sort_order": 65,
+    "is_featured": false
+  },
+  {
+    "id": 66,
+    "name": "Ant Design",
+    "url": "https://ant.design/index-cn",
+    "category": "前端设计",
+    "keywords": [
+      "前端组件",
+      "设计系统",
+      "企业界面"
+    ],
+    "description": "基于 Ant Design 设计体系的 React UI 组件库，提供面向企业级中后台产品的组件与设计规范，适合构建一致的 Web 应用界面。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/ant.design.ico",
+    "sort_order": 66,
+    "is_featured": false
   }
 ]
