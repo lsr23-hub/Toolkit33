@@ -1078,5 +1078,20 @@
     "icon_url": "https://icons.duckduckgo.com/ip3/land-book.com.ico",
     "sort_order": 72,
     "is_featured": false
+  },
+  {
+    "id": 73,
+    "name": "Comfy-Org",
+    "url": "https://github.com/Comfy-Org",
+    "category": "视频创作",
+    "keywords": [
+      "节点工作流",
+      "生成式创作",
+      "本地部署"
+    ],
+    "description": "Comfy-Org 维护的开源 AI 内容创作生态，以可视化节点图构建和复用图像、视频、音频与 3D 工作流，适合本地生成和接入生产流程。",
+    "icon_url": "https://icons.duckduckgo.com/ip3/github.com.ico",
+    "sort_order": 73,
+    "is_featured": false
   }
 ]

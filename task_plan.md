@@ -20,3 +20,13 @@ Update the card detail page so the source URL is an underlined copy link with a 
 
 ## Status
 **Complete** - build, unit tests, diff checks, and desktop/mobile rendered interaction all passed.
+
+## 2026-09-07 Comfy-Org Addition
+
+- [x] Phase 1: Check the official organization and ComfyUI README for project scope
+- [x] Phase 2: Confirm no duplicate URL/name and assign the next sort order
+- [x] Phase 3: Add the Comfy-Org record to `sql/tools.sql`
+- [x] Phase 4: Regenerate data and run integrity, test, and build checks
+
+### Status
+**Complete** - Comfy-Org was added at sort order 73 after verifying the official organization metadata and ComfyUI README.

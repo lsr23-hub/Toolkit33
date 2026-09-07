@@ -112,3 +112,8 @@ INSERT OR IGNORE INTO tools
   (name, url, category, keywords, description, icon_url, sort_order, is_featured)
 VALUES
   ('Landbook', 'https://land-book.com/', '前端设计', '["网站设计","设计灵感","网站画廊"]', '精选网站设计灵感的策展型画廊，每天更新网站案例，适合创意人士寻找网页视觉与交互参考。', 'https://icons.duckduckgo.com/ip3/land-book.com.ico', 72, 0);
+
+INSERT OR IGNORE INTO tools
+  (name, url, category, keywords, description, icon_url, sort_order, is_featured)
+VALUES
+  ('Comfy-Org', 'https://github.com/Comfy-Org', '视频创作', '["节点工作流","生成式创作","本地部署"]', 'Comfy-Org 维护的开源 AI 内容创作生态，以可视化节点图构建和复用图像、视频、音频与 3D 工作流，适合本地生成和接入生产流程。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 73, 0);
