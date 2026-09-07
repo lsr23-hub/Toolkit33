@@ -1,0 +1,115 @@
+/*
+ * Design tokens
+ * Change values here to update the whole interface.
+ */
+:root {
+  --font-body: Inter, 'Noto Sans SC', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --color-brand-primary: #dc492f;
+  --color-brand-primary-hover: #b93724;
+  --color-text: #171817;
+  --color-text-muted: #737875;
+  --color-text-subtle: #a0a5a2;
+  --color-text-inverse: #fff;
+  --color-surface: #fff;
+  --color-page-background: #fff;
+  --color-surface-soft: #f2f3f1;
+  --color-surface-hover: #f7f7f5;
+  --color-surface-dark: #151716;
+  --color-border: #dedfdd;
+  --color-icon-dark: #171817;
+  --color-icon-border: #2f3330;
+  --color-icon-surface: #fff;
+  --color-icon-text: #171817;
+  --color-masthead-eyebrow: #979d9a;
+  --color-masthead-copy: #aeb4b0;
+  --color-masthead-meta: #989e9a;
+  --color-input: #fff;
+  --color-input-text: #222623;
+  --color-input-placeholder: #7a807c;
+  --color-kbd: #f0f1ef;
+  --color-kbd-text: #7c827e;
+  --color-search-action: #656b67;
+  --color-overlay: rgba(11, 13, 12, .62);
+  --color-overlay-clear: rgba(11, 13, 12, 0);
+  --shadow-modal: 0 28px 80px rgba(0, 0, 0, .3);
+  --shadow-modal-clear: 0 2px 8px rgba(0, 0, 0, 0);
+  --shadow-nav: 0 14px 30px rgba(0, 0, 0, .1);
+  --shadow-card-hover: 0 4px 28px -10px rgba(23, 24, 23, .42), 0 2px 14px -5px rgba(23, 24, 23, .24);
+
+  --font-size-2xs: 8px;
+  --font-size-xs: 9px;
+  --font-size-sm: 10px;
+  --font-size-md: 11px;
+  --font-size-body: 12px;
+  --font-size-lg: 13px;
+  --font-size-card: 16px;
+  --font-size-card-mobile: 14px;
+  --font-size-empty: 17px;
+  --font-size-section: 22px;
+  --font-size-toolbar: 30px;
+  --font-size-brand: 22px;
+  --font-size-brand-mobile: 20px;
+  --font-size-title: clamp(2.7rem, 5vw, 4.4rem);
+  --font-size-title-mobile: clamp(2.4rem, 12vw, 3.6rem);
+  --font-size-closing: clamp(2.2rem, 4vw, 3.7rem);
+  --font-size-modal-title: clamp(1.65rem, 4vw, 2.25rem);
+  --font-size-modal-title-mobile: 1.55rem;
+
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --line-height-tight: 1.05;
+  --line-height-title: 1.04;
+  --line-height-modal: 1.08;
+
+  --radius-none: 0px;
+  --radius-xs: 5px;
+  --radius-sm: 6px;
+  --radius-md: 7px;
+  --radius-lg: 10px;
+  --radius-card: 12px;
+  --radius-card-large: 16px;
+  --radius-round: 50%;
+
+  --space-card-column: 32px;
+  --space-card-row: 12px;
+
+  /* Semantic aliases kept stable for component styles. */
+  --ink: var(--color-text);
+  --muted: var(--color-text-muted);
+  --line: var(--color-border);
+  --surface: var(--color-surface);
+  --soft: var(--color-surface-soft);
+  --hover: var(--color-surface-hover);
+  --accent: var(--color-brand-primary);
+  --dark: var(--color-surface-dark);
+}
+
+:root[data-theme='dark'] {
+  --color-brand-primary: #f06a4f;
+  --color-brand-primary-hover: #dc492f;
+  --color-text: #f3f4f1;
+  --color-text-muted: #a7ada8;
+  --color-text-subtle: #a0a5a2;
+  --color-text-inverse: #fff;
+  --color-surface: #181a19;
+  --color-page-background: #181a19;
+  --color-surface-soft: #2a2e2b;
+  --color-surface-hover: #292d2a;
+  --color-surface-dark: #181a19;
+  --color-border: #3b403d;
+  --color-icon-dark: #171817;
+  --color-icon-border: #2f3330;
+  --color-icon-surface: #fff;
+  --color-icon-text: #171817;
+  --color-input: #202321;
+  --color-input-text: #f3f4f1;
+  --color-input-placeholder: #a7ada8;
+  --color-kbd: #2a2e2b;
+  --color-kbd-text: #a7ada8;
+  --color-search-action: #a7ada8;
+  --shadow-card-hover: 0 4px 28px -10px rgba(0, 0, 0, .78), 0 2px 14px -5px rgba(243, 244, 241, .22);
+}

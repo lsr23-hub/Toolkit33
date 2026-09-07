@@ -1,8 +1,8 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  ArrowUpRight,
   Bookmark,
+  Copy,
   ExternalLink,
   Menu,
   Moon,
@@ -27,6 +27,15 @@ const categoryNotes = {
   '安全测试': '在发布前多看一眼',
 };
 const iconToneCache = new Map();
+const startsWithLatin = (name) => /^[a-z]/i.test(name);
+const compareToolNames = (a, b) => {
+  const latinOrder = Number(startsWithLatin(b.name)) - Number(startsWithLatin(a.name));
+  return latinOrder || a.name.localeCompare(b.name, 'zh-CN', { numeric: true, sensitivity: 'base' }) || a.id - b.id;
+};
+
+function getThemeToken(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
 
 function needsDarkIconBackground(image) {
   const source = image.currentSrc || image.src;
@@ -83,7 +92,7 @@ function App() {
 
   const groupedTools = useMemo(() => categoryOrder.map((category) => ({
     category,
-    items: filteredTools.filter((tool) => tool.category === category),
+    items: filteredTools.filter((tool) => tool.category === category).sort(compareToolNames),
   })).filter((group) => group.items.length), [filteredTools]);
 
   useEffect(() => {
@@ -178,12 +187,6 @@ function App() {
     return next;
   });
 
-  const openRandomTool = () => {
-    const pool = filteredTools.length ? filteredTools : tools;
-    const item = pool[Math.floor(Math.random() * pool.length)];
-    window.open(item.url, '_blank', 'noopener,noreferrer');
-  };
-
   const openTool = (tool, trigger) => {
     lastFocusedRef.current = trigger;
     const source = trigger.closest('.tool-row') || trigger;
@@ -210,14 +213,20 @@ function App() {
     const to = destination.getBoundingClientRect();
     const translateX = to.left + to.width / 2 - (from.left + from.width / 2);
     const translateY = to.top + to.height / 2 - (from.top + from.height / 2);
+    const modalRadius = getThemeToken('--radius-card-large');
+    const radiusNone = getThemeToken('--radius-none');
+    const modalShadow = getThemeToken('--shadow-modal');
+    const modalShadowClear = getThemeToken('--shadow-modal-clear');
+    const overlay = getThemeToken('--color-overlay');
+    const overlayClear = getThemeToken('--color-overlay-clear');
     card.style.pointerEvents = 'none';
     const cardAnimation = card.animate([
-      { transform: 'none', opacity: 1, borderRadius: '16px', boxShadow: '0 28px 80px rgba(0, 0, 0, .3)' },
-      { transform: `translate(${translateX}px, ${translateY}px) scale(${to.width / from.width}, ${to.height / from.height})`, opacity: 0, borderRadius: '0px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0)' },
+      { transform: 'none', opacity: 1, borderRadius: modalRadius, boxShadow: modalShadow },
+      { transform: `translate(${translateX}px, ${translateY}px) scale(${to.width / from.width}, ${to.height / from.height})`, opacity: 0, borderRadius: radiusNone, boxShadow: modalShadowClear },
     ], { duration: 260, easing: 'cubic-bezier(.7, 0, .84, 0)', fill: 'forwards' });
     const layerAnimation = layer.animate([
-      { backgroundColor: 'rgba(11, 13, 12, .62)', backdropFilter: 'blur(8px)' },
-      { backgroundColor: 'rgba(11, 13, 12, 0)', backdropFilter: 'blur(0)' },
+      { backgroundColor: overlay, backdropFilter: 'blur(8px)' },
+      { backgroundColor: overlayClear, backdropFilter: 'blur(0)' },
     ], { duration: 220, easing: 'ease-in', fill: 'forwards' });
     const token = {};
     const finish = () => {
@@ -292,7 +301,7 @@ function App() {
             <div className="masthead-copy"><p>CURATED TOOL INDEX / 2026</p><h1>把值得留下的工具，<br /><em>放在手边。</em></h1><span>一份持续更新的个人工具目录，按真正的使用场景整理。</span></div>
             <div className="masthead-side">
               <div className="masthead-search"><Search size={18} /><input ref={searchRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索工具、关键词或用途" aria-label="搜索工具、关键词或用途" /><kbd>⌘ K</kbd>{query && <button onClick={() => setQuery('')} aria-label="清除搜索"><X size={15} /></button>}</div>
-              <div className="masthead-meta"><span>共 <strong>{tools.length}</strong> 个工具 · <strong>{categoryOrder.length}</strong> 个分类</span><button onClick={openRandomTool}>随机打开 <ArrowUpRight size={15} /></button></div>
+              <div className="masthead-meta"><span>共 <strong>{tools.length}</strong> 个工具 · <strong>{categoryOrder.length}</strong> 个分类</span></div>
             </div>
           </div>
         </section>
@@ -302,13 +311,13 @@ function App() {
             <div className="sidebar-list" ref={categoryListRef}>{['全部', ...categoryOrder].map((category) => <button key={category} ref={(node) => { categoryButtonRefs.current[category] = node; }} className={activeCategory === category && !savedOnly ? 'active' : ''} aria-current={activeCategory === category && !savedOnly ? 'location' : undefined} onClick={() => selectCategory(category)}>{category}<span>{category === '全部' ? tools.length : tools.filter((tool) => tool.category === category).length}</span></button>)}</div>
           </aside>
           <section id="tools" className="editorial-main">
-            <div className="directory-toolbar"><div><p>当前目录</p><h2 ref={directoryHeadingRef} tabIndex="-1">{savedOnly ? '已收藏' : '全部工具'}</h2></div><div className="toolbar-result"><span>显示 {filteredTools.length} / {tools.length}</span><button className={savedOnly ? 'saved-filter active' : 'saved-filter'} onClick={() => setSavedOnly((value) => !value)}><Bookmark size={14} fill={savedOnly ? 'currentColor' : 'none'} /> {savedOnly ? '查看全部' : '只看收藏'}</button></div></div>
+            <div className="directory-toolbar"><div><p>当前目录</p><h2 ref={directoryHeadingRef} tabIndex="-1">{savedOnly ? '已收藏' : '全部工具'}</h2></div><div className="toolbar-result"><span>显示 {filteredTools.length} / {tools.length}</span><button className={savedOnly ? 'saved-filter active' : 'saved-filter'} onClick={() => setSavedOnly((value) => !value)} aria-label={savedOnly ? '查看全部工具' : '只看收藏'} aria-pressed={savedOnly} title={savedOnly ? '查看全部工具' : '只看收藏'}><Bookmark size={16} fill={savedOnly ? 'currentColor' : 'none'} /></button></div></div>
             {groupedTools.map(({ category, items }) => <section className="category-group" data-category={category} ref={(node) => { categoryRefs.current[category] = node; }} key={category}><div className="category-heading"><div><span>SECTION / {String(categoryOrder.indexOf(category) + 1).padStart(2, '0')}</span><h3>{category}</h3><p>{categoryNotes[category]}</p></div><strong>{String(items.length).padStart(2, '0')}</strong></div><div className="editorial-grid">{items.map((tool) => <ToolCard key={tool.id} tool={tool} isSaved={saved.has(tool.id)} onSave={() => toggleSaved(tool.id)} onOpen={(event) => openTool(tool, event.currentTarget)} />)}</div></section>)}
             {!groupedTools.length && <div className="empty-state"><Search size={22} /><h3>没有找到匹配的工具</h3><p>试试更短的关键词，或切换到“全部工具”。</p></div>}
           </section>
         </div>
 
-        <section className="closing-band"><div><p>叁叁的工具目录</p><h2>下次需要时，<br /><em>这里已经准备好了。</em></h2></div><button className="dark-button" onClick={openRandomTool}>打开一个工具 <ExternalLink size={16} /></button></section>
+        <section className="closing-band"><div><p>叁叁的工具目录</p><h2>下次需要时，<br /><em>这里已经准备好了。</em></h2></div></section>
       </main>
       <footer className="site-footer"><span>叁叁的实用工具集</span><span>用心收集，保持更新</span><span>{saved.size ? `${saved.size} 个已保存` : '个人工作台'}</span></footer>
       {activeTool && <ToolModal tool={activeTool} originRect={activeOriginRef.current} openAnimationRef={openAnimationRef} isSaved={saved.has(activeTool.id)} onSave={() => toggleSaved(activeTool.id)} onClose={closeTool} />}
@@ -356,17 +365,43 @@ function ToolIcon({ tool, large = false }) {
 function ToolModal({ tool, originRect, openAnimationRef, isSaved, onSave, onClose }) {
   const dialogRef = useRef(null);
   const closeRef = useRef(null);
+  const copyResetRef = useRef(null);
+  const [copyStatus, setCopyStatus] = useState('idle');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const hasSharedMotion = Boolean(originRect && Element.prototype.animate && !reduceMotion);
+  const handleCopyUrl = async () => {
+    try {
+      let copied = false;
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(tool.url);
+          copied = true;
+        } catch {
+          // Fall through to the legacy clipboard path when permissions or context block the API.
+        }
+      }
+      if (!copied) copied = await copyWithExecCommand(tool.url);
+      if (!copied) throw new Error('Clipboard copy failed');
+      setCopyStatus('success');
+    } catch {
+      setCopyStatus('error');
+    }
+    window.clearTimeout(copyResetRef.current);
+    copyResetRef.current = window.setTimeout(() => setCopyStatus('idle'), 1800);
+  };
   useLayoutEffect(() => {
     const card = dialogRef.current;
     if (!card || !hasSharedMotion) return undefined;
     const destination = card.getBoundingClientRect();
     const translateX = originRect.left + originRect.width / 2 - (destination.left + destination.width / 2);
     const translateY = originRect.top + originRect.height / 2 - (destination.top + destination.height / 2);
+    const modalRadius = getThemeToken('--radius-card-large');
+    const radiusNone = getThemeToken('--radius-none');
+    const modalShadow = getThemeToken('--shadow-modal');
+    const modalShadowClear = getThemeToken('--shadow-modal-clear');
     const animation = card.animate([
-      { transform: `translate(${translateX}px, ${translateY}px) scale(${originRect.width / destination.width}, ${originRect.height / destination.height})`, opacity: 0, borderRadius: '0px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0)' },
-      { transform: 'none', opacity: 1, borderRadius: '16px', boxShadow: '0 28px 80px rgba(0, 0, 0, .3)' },
+      { transform: `translate(${translateX}px, ${translateY}px) scale(${originRect.width / destination.width}, ${originRect.height / destination.height})`, opacity: 0, borderRadius: radiusNone, boxShadow: modalShadowClear },
+      { transform: 'none', opacity: 1, borderRadius: modalRadius, boxShadow: modalShadow },
     ], { duration: 380, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'both' });
     openAnimationRef.current = animation;
     animation.finished.then(() => {
@@ -380,8 +415,23 @@ function ToolModal({ tool, originRect, openAnimationRef, isSaved, onSave, onClos
       if (openAnimationRef.current === animation) openAnimationRef.current = null;
     };
   }, [hasSharedMotion, openAnimationRef, originRect]);
+  useEffect(() => () => window.clearTimeout(copyResetRef.current), []);
   useEffect(() => { closeRef.current?.focus(); const onKeyDown = (event) => { if (event.key === 'Tab' && dialogRef.current) { const focusable = dialogRef.current.querySelectorAll('button, a[href]'); if (!focusable.length) return; const first = focusable[0]; const last = focusable[focusable.length - 1]; if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); } else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); } } }; document.addEventListener('keydown', onKeyDown); return () => document.removeEventListener('keydown', onKeyDown); }, []);
-  return <div className="modal-layer" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}><article className={`expanded-card ${hasSharedMotion ? 'has-shared-motion' : ''}`} ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="expanded-title" aria-describedby="expanded-description"><button className="modal-close" ref={closeRef} onClick={onClose} aria-label="关闭详情"><X size={18} /></button><div className="expanded-summary"><ToolIcon tool={tool} large /><div className="expanded-heading"><p>{tool.category}</p><h2 id="expanded-title">{tool.name}</h2><div className="tag-list modal-tags">{tool.keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></div><button className={`save-detail ${isSaved ? 'saved' : ''}`} onClick={onSave} aria-label={isSaved ? '取消保存' : '保存工具'}><Bookmark size={18} fill={isSaved ? 'currentColor' : 'none'} /></button></div><div className="expanded-content"><h3>项目介绍</h3><p className="expanded-description" id="expanded-description">{tool.description}</p><div className="source-line"><span>项目网址</span><a href={tool.url} target="_blank" rel="noreferrer">{tool.url.replace(/^https?:\/\//, '')}<ExternalLink size={14} /></a></div><a className="visit-button" href={tool.url} target="_blank" rel="noreferrer">访问项目 <ArrowUpRight size={16} /></a></div></article></div>;
+  return <div className="modal-layer" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}><article className={`expanded-card ${hasSharedMotion ? 'has-shared-motion' : ''}`} ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="expanded-title" aria-describedby="expanded-description"><button className="modal-close" ref={closeRef} onClick={onClose} aria-label="关闭详情"><X size={18} /></button><div className="expanded-summary"><ToolIcon tool={tool} large /><div className="expanded-heading"><p>{tool.category}</p><h2 id="expanded-title">{tool.name}</h2><div className="tag-list modal-tags">{tool.keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></div><button className={`save-detail ${isSaved ? 'saved' : ''}`} onClick={onSave} aria-label={isSaved ? '取消保存' : '保存工具'}><Bookmark size={18} fill={isSaved ? 'currentColor' : 'none'} /></button></div><div className="expanded-content"><h3>项目介绍</h3><p className="expanded-description" id="expanded-description">{tool.description}</p><div className="source-line"><span>项目网址</span><button className="source-copy-link" type="button" onClick={handleCopyUrl} aria-label={`复制项目网址：${tool.url}`}>{tool.url}<Copy size={14} /></button></div><a className="copy-button" href={tool.url} target="_blank" rel="noreferrer" aria-label="点击跳转">点击跳转 <ExternalLink size={16} /></a></div>{copyStatus !== 'idle' && <div className="copy-toast" role="status" aria-live="polite">{copyStatus === 'success' ? '已复制网址' : '复制失败，请手动复制'}</div>}</article></div>;
+}
+
+async function copyWithExecCommand(value) {
+  const textArea = document.createElement('textarea');
+  textArea.value = value;
+  textArea.style.position = 'fixed';
+  textArea.style.opacity = '0';
+  document.body.append(textArea);
+  try {
+    textArea.select();
+    return document.execCommand('copy');
+  } finally {
+    textArea.remove();
+  }
 }
 
 createRoot(document.getElementById('root')).render(<App />);

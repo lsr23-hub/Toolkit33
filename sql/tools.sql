@@ -98,3 +98,17 @@ VALUES
   ('零克查词', 'https://www.lingkechaci.com/', '数据与文档', '["敏感词检测","内容审核","平台合规"]', '面向内容创作者的敏感词和违规词检测工具，支持小红书、抖音、快手和 B 站等平台内容检查，适合发布前进行文字审核。', 'https://icons.duckduckgo.com/ip3/www.lingkechaci.com.ico', 64, 0),
   ('bloub', 'https://bloub.vercel.app/', '前端设计', '["矢量动画","头像动效","形态变形"]', '基于 SVG 的动画头像实验，将参考头像逐帧重建并在 14 种形态之间变形，适合观察无动画库的 SVG 动效实现。', 'https://icons.duckduckgo.com/ip3/bloub.vercel.app.ico', 65, 0),
   ('Ant Design', 'https://ant.design/index-cn', '前端设计', '["前端组件","设计系统","企业界面"]', '基于 Ant Design 设计体系的 React UI 组件库，提供面向企业级中后台产品的组件与设计规范，适合构建一致的 Web 应用界面。', 'https://icons.duckduckgo.com/ip3/ant.design.ico', 66, 0);
+
+INSERT OR IGNORE INTO tools
+  (name, url, category, keywords, description, icon_url, sort_order, is_featured)
+VALUES
+  ('Hallmark', 'https://www.usehallmark.com/', 'AI 编程', '["设计技能","界面规范","反模板化"]', '面向 AI 编程助手的设计 skill，将字体、色彩、布局、动效和交互规则整合为一套反模板化规范，支持页面构建、研究、审查与重设计。', 'https://icons.duckduckgo.com/ip3/www.usehallmark.com.ico', 67, 0),
+  ('Cowart', 'https://github.com/zhongerxin/cowart', 'AI 编程', '["无限画布","图片生成","幻灯片制作"]', '面向 Codex 的原生无限画布插件，基于 tldraw 支持构思、标注、AI 图片生成、HTML 页面和幻灯片制作，适合在项目中持续迭代视觉内容。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 68, 0),
+  ('Refero Styles', 'https://styles.refero.design/', '前端设计', '["设计系统","界面规范","设计参考"]', '面向 AI Agent 的设计系统参考库，收录产品网站的颜色、字体、间距、组件和 DESIGN.md 规则，适合用真实界面证据辅助网页设计。', 'https://icons.duckduckgo.com/ip3/styles.refero.design.ico', 69, 0),
+  ('Motion Sites', 'https://motionsites.ai/', '前端设计', '["网页灵感","设计提示词","落地页"]', '提供 AI 网站设计提示词和可直接参考的页面区块，包含落地页、页脚、背景与视频等视觉案例，适合快速构思和制作网页。', 'https://icons.duckduckgo.com/ip3/motionsites.ai.ico', 70, 0),
+  ('React Bits', 'https://reactbits.dev/', '前端设计', '["前端组件","界面动效","网页开发"]', '开源的 React 动效组件集合，提供高质量、可交互且可定制的界面组件，适合构建具有视觉表现力的网页应用。', 'https://icons.duckduckgo.com/ip3/reactbits.dev.ico', 71, 0);
+
+INSERT OR IGNORE INTO tools
+  (name, url, category, keywords, description, icon_url, sort_order, is_featured)
+VALUES
+  ('Landbook', 'https://land-book.com/', '前端设计', '["网站设计","设计灵感","网站画廊"]', '精选网站设计灵感的策展型画廊，每天更新网站案例，适合创意人士寻找网页视觉与交互参考。', 'https://icons.duckduckgo.com/ip3/land-book.com.ico', 72, 0);
