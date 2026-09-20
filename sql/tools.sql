@@ -117,3 +117,29 @@ INSERT OR IGNORE INTO tools
   (name, url, category, keywords, description, icon_url, sort_order, is_featured)
 VALUES
   ('Comfy-Org', 'https://github.com/Comfy-Org', '视频创作', '["节点工作流","生成式创作","本地部署"]', 'Comfy-Org 维护的开源 AI 内容创作生态，以可视化节点图构建和复用图像、视频、音频与 3D 工作流，适合本地生成和接入生产流程。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 73, 0);
+
+INSERT OR IGNORE INTO tools
+  (name, url, category, keywords, description, icon_url, sort_order, is_featured)
+VALUES
+  ('MediaCrawler', 'https://github.com/NanmiCoder/MediaCrawler', '数据与文档', '["媒体采集","社交平台","数据抓取"]', '开源中文社交媒体数据采集工具，支持从多个内容平台抓取公开笔记、视频、评论和互动数据，适合研究与舆情分析。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 74, 0),
+  ('BilldDesk Pro', 'https://desk.hsslive.cn/', '效率工具', '["远程桌面","跨平台控制","设备管理"]', '跨平台远程桌面控制工具，支持网页发起远控、文件传输、安卓被控、设备分组和自定义中继，提供 BilldDesk Pro 版本。', 'https://icons.duckduckgo.com/ip3/desk.hsslive.cn.ico', 75, 0),
+  ('WeKnora', 'https://github.com/Tencent/WeKnora', '数据与文档', '["知识库","RAG检索","智能问答"]', '腾讯开源的 LLM 知识库问答平台，结合文档解析、向量检索和智能 Agent，支持构建可维护的企业知识库与检索增强应用。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 76, 0),
+  ('PenguinHarness', 'https://github.com/Prism-Shadow/penguin-harness', 'AI 编程', '["多智能体","自动开发","本地部署"]', '开源本地优先的多智能体应用开发平台，覆盖 AI 应用创建、评估、优化与部署，并提供 Web、CLI 和 Docker 运行方式。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 77, 0),
+  ('InsForge', 'https://github.com/InsForge/insforge', '部署运维', '["后端平台","数据库","智能开发"]', '面向 AI 辅助开发的开源一体化后端平台，提供数据库、认证、存储、计算、托管和 AI 网关，帮助代理端到端交付全栈应用。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 78, 0),
+  ('Hypit', 'https://github.com/hypit-ai/hypit', '视频创作', '["视频代理","自动剪辑","批量变体"]', '开源 AI 视频代理工作流，可从参考视频重建脚本、素材、字幕和特效，并批量生成多个可编辑的视频变体。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 79, 0),
+  ('Agent-Reach', 'https://github.com/Panniantong/agent-reach', 'AI 编程', '["联网检索","多平台搜索","命令行工具"]', '为 AI Agent 提供互联网访问能力的命令行工具，支持搜索和读取 Twitter、Reddit、YouTube、GitHub、哔哩哔哩和小红书等平台。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 80, 0),
+  ('pyVideoTrans', 'https://github.com/jianchang512/pyvideotrans', '视频创作', '["视频翻译","语音转录","字幕配音"]', '开源视频翻译与配音工具，集成语音识别、字幕翻译、文字转语音和视频处理，适合制作多语言视频。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 81, 0),
+  ('WhisperX', 'https://github.com/m-bain/whisperX', '视频创作', '["语音识别","词级时间戳","说话人分离"]', '基于 Whisper 的自动语音识别工具，提供词级时间戳、强制对齐和说话人分离能力，适合精确生成音视频字幕。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 82, 0),
+  ('Doubao-TTS', 'https://github.com/callmerio/doubao-tts', '视频创作', '["文本转语音","豆包语音","Python客户端"]', '基于 WebSocket 协议的豆包文本转语音 Python 客户端，可将文本合成为音频并配置不同发音人。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 83, 0),
+  ('Edge-TTS', 'https://github.com/rany2/edge-tts', '视频创作', '["文本转语音","微软语音","Python工具"]', '使用 Microsoft Edge 在线语音服务的 Python 工具，无需安装 Edge 或 Windows，也不需要独立 API 密钥即可生成语音。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 84, 0),
+  ('MoneyPrinterTurbo', 'https://github.com/harry0703/MoneyPrinterTurbo', '视频创作', '["短视频生成","自动配音","内容生产"]', '一键生成短视频的开源工具，结合大语言模型、素材检索、文字转语音和 FFmpeg 自动完成脚本到成片流程。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 85, 0),
+  ('OpenMontage', 'https://github.com/OpenMontage-app/OpenMontage', '视频创作', '["视频制作","智能剪辑","生产流水线"]', '开源智能视频制作系统，提供从素材检索、脚本规划到时间线剪辑和渲染的多条生产流水线，适合将 AI 编码助手用于视频创作。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 86, 0),
+  ('NarratoAI', 'https://github.com/linyqh/NarratoAI', '视频创作', '["视频解说","自动剪辑","字幕生成"]', '基于大语言模型的视频解说与自动剪辑工具，覆盖脚本写作、配音、字幕生成和成片编辑，适合批量制作视频内容。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 87, 0);
+
+INSERT OR IGNORE INTO tools
+  (name, url, category, keywords, description, icon_url, sort_order, is_featured)
+VALUES
+  ('M3E Canvas', 'https://github.com/lnkiai/m3e-canvas', '前端设计', '["Material设计","原型画布","提示词生成"]', '在浏览器中绘制 Material 3 Expressive 界面、连接页面交互，并将设计转换为可交给 AI 编程工具使用的自然语言提示词。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 88, 0),
+  ('VoxEasy', 'https://voxeasytech.com/', '视频创作', '["语音工具","音频处理","创作者工具"]', '面向创作者的语音与音频工具服务，帮助用户处理和制作适合内容发布的声音素材。', 'https://icons.duckduckgo.com/ip3/voxeasytech.com.ico', 89, 0),
+  ('Humanizer.zh', 'https://github.com/op7418/Humanizer-zh', 'AI 编程', '["文本润色","去除机器感","Claude技能"]', 'Humanizer 的中文汉化版 Claude Code skill，用于改写文本、减少 AI 生成痕迹并保留自然的人类表达。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 91, 0),
+  ('AiToEarn', 'https://github.com/yikart/AiToEarn', '效率工具', '["内容变现","多平台发布","智能代理"]', '面向个人创作者和品牌的一站式 AI 内容营销平台，通过 Agent 自动生成、发布、互动和变现内容，覆盖多个国内外社交平台。', 'https://icons.duckduckgo.com/ip3/github.com.ico', 92, 0);
